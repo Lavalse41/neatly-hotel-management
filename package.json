@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "client-build": "cd client && tsc && vite build",
+    "server-build": "cd server && tsc",
+    "build": "npm run client-build && npm run server-build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
