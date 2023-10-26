@@ -1,69 +1,58 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+@tailwind base;
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e4e6ed;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+*::-webkit-scrollbar-track {
+  background: white;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+*::-webkit-scrollbar-thumb {
+  background-color: #e4e6ed;
+  border-radius: 8px;
+  height: 158px;
+}
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .Button {
+    @apply min-w-[144px] px-8 text-white bg-orange-600 hover:bg-orange-500 active:bg-orange-700 rounded font-inter text-body1 border-none capitalize;
   }
-  a:hover {
-    color: #747bff;
+  .Button-search-result {
+    @apply text-orange-500 bg-white hover:bg-orange-500 hover:text-white hover:border-none active:bg-orange-700 rounded font-inter text-body1 border-2 border-solid border-orange-500 capitalize;
   }
-  button {
-    background-color: #f9f9f9;
+  .Button-unavailable {
+    @apply bg-gray-200 text-gray-600 hover:bg-gray-200 cursor-not-allowed;
+  }
+  .Service-container {
+    @apply w-44 flex flex-col items-center justify-center;
+  }
+  .Input {
+    @apply text-gray-600 font-inter text-body1 bg-white border-gray-400 border-2 rounded p-3 focus:outline-none focus:border-orange-500;
+  }
+  .InputSuccess {
+    @apply text-black font-inter text-body1 bg-white border-[#c4c4c4] border rounded p-3;
+  }
+  .AddandSubtract {
+    @apply relative w-4 h-4 bg-white text-orange-500  rounded-full border border-solid border-orange-500;
+  }
+  .Disabled-select {
+    @apply rounded p-3 bg-white border-gray-400 cursor-not-allowed text-body1 w-full;
+  }
+  .Input-status {
+    @apply px-3 py-1 m-2 rounded text-body2 w-[212px] focus:border-none active:border-none;
+  }
+  .modal-box {
+    @apply p-0;
   }
 }
