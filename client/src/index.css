@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27");
+
+@tailwind base;
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e4e6ed;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #e4e6ed;
+  border-radius: 8px;
+  height: 158px;
+}
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .Button {
+    @apply min-w-[144px] px-8 text-white bg-orange-600 hover:bg-orange-500 active:bg-orange-700 rounded font-inter text-body1 border-none capitalize;
+  }
+  .Button-search-result {
+    @apply text-orange-500 bg-white hover:bg-orange-500 hover:text-white hover:border-none active:bg-orange-700 rounded font-inter text-body1 border-2 border-solid border-orange-500 capitalize;
+  }
+  .Button-unavailable {
+    @apply bg-gray-200 text-gray-600 hover:bg-gray-200 cursor-not-allowed;
+  }
+  .Service-container {
+    @apply w-44 flex flex-col items-center justify-center;
+  }
+  .Input {
+    @apply text-gray-600 font-inter text-body1 bg-white border-gray-400 border-2 rounded p-3 focus:outline-none focus:border-orange-500;
+  }
+  .InputSuccess {
+    @apply text-black font-inter text-body1 bg-white border-[#c4c4c4] border rounded p-3;
+  }
+  .AddandSubtract {
+    @apply relative w-4 h-4 bg-white text-orange-500  rounded-full border border-solid border-orange-500;
+  }
+  .Disabled-select {
+    @apply rounded p-3 bg-white border-gray-400 cursor-not-allowed text-body1 w-full;
+  }
+  .Input-status {
+    @apply px-3 py-1 m-2 rounded text-body2 w-[212px] focus:border-none active:border-none;
+  }
+  .modal-box {
+    @apply p-0;
+  }
+}

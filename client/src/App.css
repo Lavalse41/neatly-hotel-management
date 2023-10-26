@@ -1,0 +1,108 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: inter;
+}
+
+.table-lg :where(td) {
+  color: black;
+}
+
+#swiper-color {
+  position: relative;
+}
+
+#swiper-color .swiper-button-next {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  right: 210px;
+  background-image: url("https://kewjjbauwpznfmeqbdpp.supabase.co/storage/v1/object/sign/dev-storage/icon/slidebar-arrow-next.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pY29uL3NsaWRlYmFyLWFycm93LW5leHQuc3ZnIiwiaWF0IjoxNjkzODkwMjkzLCJleHAiOjE3MjU0MjYyOTN9.qifYEDUvnsjj_Yd2aDJbIxTHsHNHWS5ALGQg68xXzeo&t=2023-09-05T05%3A04%3A52.119Z");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+#swiper-color .swiper-button-prev {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 225px;
+  background-image: url("https://kewjjbauwpznfmeqbdpp.supabase.co/storage/v1/object/sign/dev-storage/icon/slidebar-arrow-prev.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pY29uL3NsaWRlYmFyLWFycm93LXByZXYuc3ZnIiwiaWF0IjoxNjkzODkwOTQ3LCJleHAiOjE3MjU0MjY5NDd9.hZnYXZUQfiOsHLTgvHveD2397LTxOV8MaVqIjdKyvr8&t=2023-09-05T05%3A15%3A46.342Z");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+#swiper-color2 .swiper-button-prev {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  background-image: url("https://kewjjbauwpznfmeqbdpp.supabase.co/storage/v1/object/sign/dev-storage/icon/slidebar-arrow-prev-orange.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pY29uL3NsaWRlYmFyLWFycm93LXByZXYtb3JhbmdlLnN2ZyIsImlhdCI6MTY5MzkwNDgwNywiZXhwIjoxNzI1NDQwODA3fQ.3OzbgN9qWLjZ5Qx35lnfTDY0lUv6X63EZ1AsavIuZRk&t=2023-09-05T09%3A06%3A46.596Z%22");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+#swiper-color2 .swiper-button-next {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0px;
+  background-image: url("https://kewjjbauwpznfmeqbdpp.supabase.co/storage/v1/object/sign/dev-storage/icon/slidebar-arrow-next-orange.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pY29uL3NsaWRlYmFyLWFycm93LW5leHQtb3JhbmdlLnN2ZyIsImlhdCI6MTY5MzkwNDg1MiwiZXhwIjoxNzI1NDQwODUyfQ.c-j0pITMKG3N9rA_ZqupRkNIG8qLsHxSZ0hCDtTlKMg&t=2023-09-05T09%3A07%3A31.482Z%22");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+#swiper-single .swiper-button-prev {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  left: 16px;
+  background-image: url("https://kewjjbauwpznfmeqbdpp.supabase.co/storage/v1/object/sign/dev-storage/icon/slidebar-arrow-prev.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pY29uL3NsaWRlYmFyLWFycm93LXByZXYuc3ZnIiwiaWF0IjoxNjkzODkwOTQ3LCJleHAiOjE3MjU0MjY5NDd9.hZnYXZUQfiOsHLTgvHveD2397LTxOV8MaVqIjdKyvr8&t=2023-09-05T05%3A15%3A46.342Z");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+#swiper-single .swiper-button-next {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  right: 16px;
+  background-image: url("https://kewjjbauwpznfmeqbdpp.supabase.co/storage/v1/object/sign/dev-storage/icon/slidebar-arrow-next.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pY29uL3NsaWRlYmFyLWFycm93LW5leHQuc3ZnIiwiaWF0IjoxNjkzODkwMjkzLCJleHAiOjE3MjU0MjYyOTN9.qifYEDUvnsjj_Yd2aDJbIxTHsHNHWS5ALGQg68xXzeo&t=2023-09-05T05%3A04%3A52.119Z");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+#datePicker {
+  border: 2px solid #d6d9e4;
+  background-color: white;
+  color: #9aa1b9;
+}
+
+#datePicker tbody > tr > td.slds-is-selected > .slds-day {
+  background: red;
+  color: pink;
+  font-weight: 700;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(0.6);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 0.7;
+}
