@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "npm run client-build && npm run server-build",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "client/dist/bundle.js"
+    }
+  ],
+  "ignoreBuildErrors": true
+}
