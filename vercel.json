@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "npm run client-build && npm run server-build",
+      "src": "npm run client-build",
       "use": "@vercel/node"
     }
   ],
