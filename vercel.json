@@ -11,6 +11,5 @@
       "src": "/(.*)",
       "dest": "client/dist/bundle.js"
     }
-  ],
-  "ignoreBuildErrors": true
+  ]
 }
