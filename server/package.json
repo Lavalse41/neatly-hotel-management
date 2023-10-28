@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon --exec ts-node src/app.ts"
+    "start": "nodemon --exec src/app.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.33.1",
