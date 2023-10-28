@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon --exec src/app.ts"
+    "start": "nodemon --exec src/app.ts",
+    "vercel-build": "echo hi"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.33.1",
