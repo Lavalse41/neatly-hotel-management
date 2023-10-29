@@ -53,7 +53,7 @@ function App() {
   const [validateRole, setValidateRole] = useState("user");
 
   const getRooms = async () => {
-    const results = await axios(`http://localhost:4000/room`);
+    const results = await axios(`https://vercel.com/lavalse41/neatly-api/room`);
     setRooms(results.data.data);
   };
 
