@@ -16,7 +16,7 @@ export function BookingsProvider({ children }: { children: ReactNode }) {
       const userId = auth.state.userData.id;
       try {
         const results = await axios(
-          `http://localhost:4000/booking/user/${userId}`
+          `https://vercel.com/lavalse41/neatly-api/${userId}`
         );
 
         setBookingsHistory(results.data.data);

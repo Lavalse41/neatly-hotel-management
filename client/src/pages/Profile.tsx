@@ -92,7 +92,7 @@ function Profile() {
     if (token) {
       const userDataFromToken = jwtDecode(token);
       const result = await axios.get(
-        `http://localhost:4000/validUser/${userDataFromToken.user_id}`
+        `https://vercel.com/lavalse41/neatly-api/validUser/${userDataFromToken.user_id}`
       );
       setCheckUser(result);
     } else {
@@ -143,7 +143,7 @@ function Profile() {
     if (token) {
       try {
         const response = await axios.get(
-          `http://localhost:4000/profile/${auth.state.userData.id}`
+          `https://vercel.com/lavalse41/neatly-api/profile/${auth.state.userData.id}`
         );
         console.log(response.data.data);
         const data = response.data.data;
@@ -196,7 +196,7 @@ function Profile() {
     if (isEmailChanged) {
       const queryParamsEmail = `?email=${user.email}`;
       const validEmail = await axios.get(
-        `http://localhost:4000/validUser/email${queryParamsEmail}`
+        `https://vercel.com/lavalse41/neatly-api/validUser/email${queryParamsEmail}`
       );
       if (validEmail.data.data.length === 1) {
         setEmailError(true);
@@ -210,7 +210,7 @@ function Profile() {
     if (isIdNumberChanged) {
       const queryParamsIdNumber = `?idNumber=${user.idNumber}`;
       const validIdNumber = await axios.get(
-        `http://localhost:4000/validUser/idNumber${queryParamsIdNumber}`
+        `https://vercel.com/lavalse41/neatly-api/validUser/idNumber${queryParamsIdNumber}`
       );
       if (validIdNumber.data.data.length === 1) {
         setidNumberValidError(true);
@@ -256,7 +256,7 @@ function Profile() {
       } else {
         try {
           const response = await axios.put(
-            `http://localhost:4000/profile/${params.profileID}`,
+            `https://vercel.com/lavalse41/neatly-api/profile/${params.profileID}`,
             formData,
             {
               headers: { "Content-Type": "multipart/form-data" },

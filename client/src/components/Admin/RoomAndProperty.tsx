@@ -101,7 +101,9 @@ function RoomAndProperty({
   const [loading, setLoading] = useState(false);
   const getRooms = async () => {
     try {
-      const results = await axios(`http://localhost:4000/room/`);
+      const results = await axios(
+        `https://vercel.com/lavalse41/neatly-api/room/`
+      );
       setRooms(results.data.data);
     } catch (error) {
       console.error("Error fetching room data:", error);
@@ -174,7 +176,9 @@ function RoomAndProperty({
 
   const fetchUpdateHandler = async (number: number) => {
     try {
-      const results = await axios.get(`http://localhost:4000/room/${number}`);
+      const results = await axios.get(
+        `https://vercel.com/lavalse41/neatly-api/room/${number}`
+      );
       setSingleRoom(results.data.data);
     } catch (error) {
       console.log(error);
@@ -250,9 +254,13 @@ function RoomAndProperty({
     } else {
       setLoading(true);
       try {
-        await axios.put(`http://localhost:4000/room/${id}`, formData, {
-          headers: { "Content-Type": "multipart/form-data" },
-        });
+        await axios.put(
+          `https://vercel.com/lavalse41/neatly-api/room/${id}`,
+          formData,
+          {
+            headers: { "Content-Type": "multipart/form-data" },
+          }
+        );
 
         setShowPage(InitialData);
 
@@ -329,7 +337,7 @@ function RoomAndProperty({
       setLoading(true);
       try {
         const results = await axios.post(
-          `http://localhost:4000/room/`,
+          `https://vercel.com/lavalse41/neatly-api/room/`,
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -351,7 +359,7 @@ function RoomAndProperty({
   const deleteRoomHandler = async (e: ChangeEvent, id: number) => {
     e.preventDefault();
     try {
-      await axios.delete(`http://localhost:4000/room/${id}`);
+      await axios.delete(`https://vercel.com/lavalse41/neatly-api/room/${id}`);
       setShowPage(InitialData);
       // navigate("/admin/RoomAndProperty")
       location.reload();

@@ -44,7 +44,7 @@ function PaymentMethod() {
     if (token) {
       const userDataFromToken = jwtDecode(token);
       const result = await axios.get(
-        `http://localhost:4000/validUser/${userDataFromToken.credit_card_id}`
+        `https://vercel.com/lavalse41/neatly-api/validUser/${userDataFromToken.credit_card_id}`
       );
       setCheckUser(result);
     } else {
@@ -63,7 +63,7 @@ function PaymentMethod() {
       if (!fullNameErrorCredit && !creditCardError) {
         try {
           const response = await axios.get(
-            `http://localhost:4000/paymentmethod/${auth.state.userData.credit_card_id}`
+            `https://vercel.com/lavalse41/neatly-api/paymentmethod/${auth.state.userData.credit_card_id}`
           );
           console.log(response.data.data);
           const data = response.data.data;
@@ -96,7 +96,7 @@ function PaymentMethod() {
       try {
         const cleanedCardNumber = payment.card_number.replace(/\s/g, "");
         const response = await axios.put(
-          `http://localhost:4000/paymentmethod/${params.paymentmethodID}`,
+          `https://vercel.com/lavalse41/neatly-api/paymentmethod/${params.paymentmethodID}`,
           { ...payment, card_number: cleanedCardNumber }
         );
         console.log(response.data);

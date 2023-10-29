@@ -60,7 +60,7 @@ function App() {
   const handleSearchResult = async (result) => {
     try {
       const results = await axios.get(
-        `http://localhost:4000/avaliable?checkInDate=${result.checkInDate}&checkOutDate=${result.checkOutDate}`
+        `https://vercel.com/lavalse41/neatly-api/avaliable?checkInDate=${result.checkInDate}&checkOutDate=${result.checkOutDate}`
       );
       console.log(results.data);
       setRooms(results.data);
