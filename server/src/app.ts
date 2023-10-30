@@ -11,6 +11,8 @@ import { bookingRouter } from "./apps/bookingRouter.ts";
 import { roomAvaliable } from "./apps/roomAvaliable.ts";
 
 const app: Express = express();
+const port = 4000;
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/room", roomRouter);
@@ -28,6 +30,10 @@ app.get("/", (req: Request, res: Response) => {
 
 app.get("*", (req: Request, res: Response) => {
   res.status(404).send("Not Found");
+});
+
+app.listen(port, () => {
+  console.log(`server is running port ${port}`);
 });
 
 export default app;
