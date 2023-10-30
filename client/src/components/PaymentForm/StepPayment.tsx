@@ -28,7 +28,7 @@ function StepPayment({
   const getPaymentID = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/paymentmethod/${auth.state.userData.credit_card_id}`
+        `https://vercel.com/lavalse41/neatly-api/paymentmethod/${auth.state.userData.credit_card_id}`
       );
       // console.log(response.data.data);
       const data = response.data.data;

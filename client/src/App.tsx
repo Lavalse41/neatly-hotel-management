@@ -53,14 +53,14 @@ function App() {
   const [validateRole, setValidateRole] = useState("user");
 
   const getRooms = async () => {
-    const results = await axios(`http://localhost:4000/room`);
+    const results = await axios(`https://vercel.com/lavalse41/neatly-api/room`);
     setRooms(results.data.data);
   };
 
   const handleSearchResult = async (result) => {
     try {
       const results = await axios.get(
-        `http://localhost:4000/avaliable?checkInDate=${result.checkInDate}&checkOutDate=${result.checkOutDate}`
+        `https://vercel.com/lavalse41/neatly-api/avaliable?checkInDate=${result.checkInDate}&checkOutDate=${result.checkOutDate}`
       );
       console.log(results.data);
       setRooms(results.data);
@@ -150,19 +150,8 @@ function App() {
 
   const adminRoutes = (
     <>
-      {/* <Routes>
-        {onlyAdminRoutes.map(({ path, sidebar }) => (
-          <Route key={path} path={path} element={sidebar} />
-        ))}
-      </Routes>
       <Routes>
-        {onlyAdminRoutes.map(({ path, mainContent }) => (
-          <Route key={path} path={path} element={mainContent} />
-        ))}
-      </Routes> */}
-
-      <Routes>
-      <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         {onlyAdminRoutes.map(({ path, element, children }) => (
           <Route key={path} path={path} element={element}>
             {children &&
@@ -175,26 +164,7 @@ function App() {
               ))}
           </Route>
         ))}
-        
       </Routes>
-      {/* <Routes>
-        <Route path="/admin" element={<Admin />}>
-          <Route
-            path="/admin/customerBooking"
-            element={[<Admin />, <CustomerBooking />]}
-          />
-          <Route
-            path="/admin/RoomManagement"
-            element={[<Admin />, <RoomManagement />]}
-          />
-          <Route
-            path="/admin/RoomAndProperty"
-            element={[<Admin />, <RoomAndProperty />]}
-          />
-        </Route>
-
-        <Route path="/login" element={<Login />} />
-      </Routes> */}
     </>
   );
 

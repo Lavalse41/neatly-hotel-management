@@ -130,7 +130,7 @@ function ChangeDate() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/booking/${bookId}`
+        `https://vercel.com/lavalse41/neatly-api/booking/${bookId}`
       );
       const data = response.data.data;
       setBookingData(data);
@@ -146,7 +146,7 @@ function ChangeDate() {
   const fetchRoomAvaliable = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/booking/avaliable/${bookingData.room_avaliable_id}`
+        `https://vercel.com/lavalse41/neatly-api/booking/avaliable/${bookingData.room_avaliable_id}`
       );
       const data = response.data.data;
       setRoomAvaliable(data);
@@ -166,7 +166,7 @@ function ChangeDate() {
 
     try {
       await axios.put(
-        `http://localhost:4000/booking/ChangeDate/${bookId}`,
+        `https://vercel.com/lavalse41/neatly-api/booking/ChangeDate/${bookId}`,
         data
       );
       navigate(`/booking/user/${bookingData.user_id}`);
@@ -221,7 +221,7 @@ function ChangeDate() {
       //@ts-ignore
       const userDataFromToken = jwtDecode(token);
       const result = await axios.get(
-        `http://localhost:4000/validUser/${userDataFromToken.user_id}`
+        `https://vercel.com/lavalse41/neatly-api/validUser/${userDataFromToken.user_id}`
       );
       //@ts-ignore
       setCheckUser(result);

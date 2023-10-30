@@ -21,7 +21,7 @@ function RoomDetail() {
   const getRoomId = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:4000/room/${params.roomId}`
+        `https://vercel.com/lavalse41/neatly-api/room/${params.roomId}`
       );
       setRoomDetail(res.data.data);
     } catch (error) {

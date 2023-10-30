@@ -15,61 +15,15 @@ function AuthProvider(props) {
   });
 
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   // Check for a token in local storage
-  //   const token = localStorage.getItem("token");
-
-  //   if (token) {
-  //     // Decode the token to obtain user data
-  //     const userDataFromToken = jwtDecode(token);
-
-  //     // Fetch additional user data using the user ID
-  //     axios
-  //       .get(`http://localhost:4000/validUser/${userDataFromToken.user_id}`)
-  //       .then((result) => {
-  //         console.log(result);
-
-  //         setState({
-  //           ...state,
-  //           user: userDataFromToken,
-  //           userData: result.data.user, // Assuming the data is nested under 'data'
-  //           loading: false,
-  //         });
-
-  //         localStorage.setItem("userData", JSON.stringify(result.data.user));
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error fetching user data:", error);
-  //         setState({
-  //           ...state,
-  //           loading: false,
-  //           error: "Error fetching user data",
-  //         });
-  //       });
-  //   } else {
-  //     const storedUserData = localStorage.getItem("userData");
-  //     if (storedUserData) {
-  //       setState({
-  //         ...state,
-  //         user: jwtDecode(token),
-  //         userData: JSON.parse(storedUserData),
-  //         loading: false,
-  //       });
-  //     } else {
-  //       setState({
-  //         ...state,
-  //         loading: false,
-  //       });
-  //     }
-  //   }
-  // }, []);
 
   const fetchAuth = async () => {
     const token = localStorage.getItem("token");
     if (token) {
       const userDataFromToken = jwtDecode(token);
       await axios
-        .get(`http://localhost:4000/validUser/${userDataFromToken.user_id}`)
+        .get(
+          `https://vercel.com/lavalse41/neatly-api/validUser/${userDataFromToken.user_id}`
+        )
         .then((result) => {
           setState({
             ...state,
@@ -111,7 +65,10 @@ function AuthProvider(props) {
   // make a login request
   const login = async (data) => {
     try {
-      const result = await axios.post(`http://localhost:4000/auth/login`, data);
+      const result = await axios.post(
+        `https://vercel.com/lavalse41/neatly-api/auth/login`,
+        data
+      );
       const token = result.data.token;
       const role = result.data.userData.role;
       console.log(token);
