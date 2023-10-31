@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon src/app.ts",
+    "start": "nodemon src/index.ts",
     "vercel-build": "echo hi",
     "build": "tsc"
   },
