@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "nodemon src/index.ts",
-    "vercel-build": "echo hi",
+    "vercel-build": "babel src --out-dir public",
     "build": "tsc"
   },
   "dependencies": {
