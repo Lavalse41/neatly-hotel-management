@@ -1,4 +1,4 @@
-import { supabase } from "../utils/db.ts";
+import { supabase } from "../utils/db";
 import { Router, Request, Response } from "express";
 export const paymentMethodRouter = Router();
 import crypto from "crypto";

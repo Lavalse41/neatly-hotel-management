@@ -1,7 +1,7 @@
-import { supabase } from "../utils/db.ts";
+import { supabase } from "../utils/db";
 import { Router, Request, Response } from "express";
-import { manyUpload } from "../utils/manyUpload.ts";
-import { deleteImage } from "../utils/deleteImage.ts";
+import { manyUpload } from "../utils/manyUpload";
+import { deleteImage } from "../utils/deleteImage";
 import multer from "multer";
 export const roomRouter = Router();
 

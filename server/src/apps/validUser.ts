@@ -1,4 +1,4 @@
-import { supabase } from "../utils/db.ts";
+import { supabase } from "../utils/db";
 import { Router } from "express";
 
 export const validUser = Router();

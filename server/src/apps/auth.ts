@@ -1,8 +1,8 @@
 import { Router } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { supabase } from "../utils/db.ts";
-import { supabaseUpload } from "../utils/upload.ts";
+import { supabase } from "../utils/db";
+import { supabaseUpload } from "../utils/upload";
 import multer from "multer";
 import crypto from "crypto";
 
