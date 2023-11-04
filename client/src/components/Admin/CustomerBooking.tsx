@@ -42,7 +42,7 @@ function CustomerBooking({ handleCustomerBooking }: CustomerBookingProps) {
   const getBooking = async () => {
     try {
       setIsLoading(true);
-      const results = await axios(`https://vercel.com/lavalse41/neatly-api/booking/admin/admin`);
+      const results = await axios(`https://neatly-dj6ygctp8-lavalse41.vercel.app/booking/admin/admin`);
       setBooking(results.data);
       setFilterBookingList(results.data);
       console.log(results.data);

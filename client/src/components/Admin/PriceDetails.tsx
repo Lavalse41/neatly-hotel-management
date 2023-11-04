@@ -23,7 +23,7 @@ function PriceDetails({ bookId }: { bookId: number | null }) {
   const getData = async () => {
     try {
       const response = await axios.get(
-        `https://vercel.com/lavalse41/neatly-api/booking/${bookId}`
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/booking/${bookId}`
       );
       console.log(response.data.data);
       const data = response.data.data;

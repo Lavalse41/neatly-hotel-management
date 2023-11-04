@@ -46,7 +46,7 @@ export default function DropdownSearch({
     const room_avaliable_id = roomNumber;
     try {
       const response = await axios.put(
-        `https://vercel.com/lavalse41/neatly-api/avaliable/admin/admin/${room_avaliable_id}`,
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/avaliable/admin/admin/${room_avaliable_id}`,
         { room_status: selectedStatus }
       );
 

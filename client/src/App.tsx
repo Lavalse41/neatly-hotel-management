@@ -53,14 +53,14 @@ function App() {
   const [validateRole, setValidateRole] = useState("user");
 
   const getRooms = async () => {
-    const results = await axios(`https://vercel.com/lavalse41/neatly-api/room`);
+    const results = await axios(`https://neatly-dj6ygctp8-lavalse41.vercel.app/room`);
     setRooms(results.data.data);
   };
 
   const handleSearchResult = async (result) => {
     try {
       const results = await axios.get(
-        `https://vercel.com/lavalse41/neatly-api/avaliable?checkInDate=${result.checkInDate}&checkOutDate=${result.checkOutDate}`
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/avaliable?checkInDate=${result.checkInDate}&checkOutDate=${result.checkOutDate}`
       );
       console.log(results.data);
       setRooms(results.data);

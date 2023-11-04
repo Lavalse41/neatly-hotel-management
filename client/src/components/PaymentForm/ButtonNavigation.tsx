@@ -57,7 +57,7 @@ function ButtonNavigation({
     );
 
     const roomAvaliable = await axios.get(
-      `https://vercel.com/lavalse41/neatly-api/avaliable?checkInDate=${userInput.checkInDate}&checkOutDate=${userInput.checkOutDate}`
+      `https://neatly-dj6ygctp8-lavalse41.vercel.app/avaliable?checkInDate=${userInput.checkInDate}&checkOutDate=${userInput.checkOutDate}`
     );
     const results = roomAvaliable.data;
     // console.log(results);
@@ -99,10 +99,16 @@ function ButtonNavigation({
       };
     }
     try {
-      await axios.post("https://vercel.com/lavalse41/neatly-api/checkout", {
-        total: data.total_price_add_reqs,
-      });
-      await axios.post(`https://vercel.com/lavalse41/neatly-api/booking`, data);
+      await axios.post(
+        "https://neatly-dj6ygctp8-lavalse41.vercel.app/checkout",
+        {
+          total: data.total_price_add_reqs,
+        }
+      );
+      await axios.post(
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/booking`,
+        data
+      );
 
       // const userId = auth.state.userData.id;
       // const results = await axios(

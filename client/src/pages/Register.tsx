@@ -148,7 +148,7 @@ function Register() {
     //check username
     const queryParamsUsername = `?username=${username}`;
     const validUsername = await axios.get(
-      `https://vercel.com/lavalse41/neatly-api/validUser/username${queryParamsUsername}`
+      `https://neatly-dj6ygctp8-lavalse41.vercel.app/validUser/username${queryParamsUsername}`
     );
     if (validUsername.data.data.length === 1) {
       setUsernameError(true);
@@ -160,7 +160,7 @@ function Register() {
     //check email
     const queryParamsEmail = `?email=${email}`;
     const validEmail = await axios.get(
-      `https://vercel.com/lavalse41/neatly-api/validUser/email${queryParamsEmail}`
+      `https://neatly-dj6ygctp8-lavalse41.vercel.app/validUser/email${queryParamsEmail}`
     );
     if (validEmail.data.data.length === 1) {
       setEmailError(true);
@@ -172,7 +172,7 @@ function Register() {
     //check idNumber
     const queryParamsIdNumber = `?idNumber=${idNumber}`;
     const validIdNumber = await axios.get(
-      `https://vercel.com/lavalse41/neatly-api/validUser/idNumber${queryParamsIdNumber}`
+      `https://neatly-dj6ygctp8-lavalse41.vercel.app/validUser/idNumber${queryParamsIdNumber}`
     );
     if (validIdNumber.data.data.length === 1) {
       setidNumberValidError(true);
@@ -254,7 +254,7 @@ function Register() {
     } else {
       try {
         await axios.post(
-          "https://vercel.com/lavalse41/neatly-api/auth/register",
+          "https://neatly-dj6ygctp8-lavalse41.vercel.app/auth/register",
           data,
           {
             headers: { "Content-Type": "multipart/form-data" },

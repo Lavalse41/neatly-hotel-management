@@ -41,7 +41,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        `https://vercel.com/lavalse41/neatly-api/auth/login`,
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/auth/login`,
         data
       );
       if (response.data.message === "Login successful") {

@@ -25,7 +25,7 @@ function CancelSuccess() {
   const getData = async () => {
     try {
       const response = await axios.get(
-        `https://vercel.com/lavalse41/neatly-api/booking/${bookId}`
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/booking/${bookId}`
       );
       console.log(response.data.data);
       const data = response.data.data;
@@ -45,7 +45,7 @@ function CancelSuccess() {
     if (token) {
       const userDataFromToken = jwtDecode(token);
       const result = await axios.get(
-        `https://vercel.com/lavalse41/neatly-api/validUser/${userDataFromToken.user_id}`
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/validUser/${userDataFromToken.user_id}`
       );
       setCheckUser(result);
     } else {

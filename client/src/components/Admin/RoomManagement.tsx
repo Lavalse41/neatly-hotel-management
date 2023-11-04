@@ -35,7 +35,7 @@ function RoomManagement({ handleRoomManage }: RoomManagementProps) {
     try {
       setIsLoading(true);
       const results = await axios(
-        `https://vercel.com/lavalse41/neatly-api/avaliable/admin/admin`
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/avaliable/admin/admin`
       );
 
       setBooking(results.data);

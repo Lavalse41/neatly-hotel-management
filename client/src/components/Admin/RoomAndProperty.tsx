@@ -102,7 +102,7 @@ function RoomAndProperty({
   const getRooms = async () => {
     try {
       const results = await axios(
-        `https://vercel.com/lavalse41/neatly-api/room/`
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/room/`
       );
       setRooms(results.data.data);
     } catch (error) {
@@ -177,7 +177,7 @@ function RoomAndProperty({
   const fetchUpdateHandler = async (number: number) => {
     try {
       const results = await axios.get(
-        `https://vercel.com/lavalse41/neatly-api/room/${number}`
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/room/${number}`
       );
       setSingleRoom(results.data.data);
     } catch (error) {
@@ -255,7 +255,7 @@ function RoomAndProperty({
       setLoading(true);
       try {
         await axios.put(
-          `https://vercel.com/lavalse41/neatly-api/room/${id}`,
+          `https://neatly-dj6ygctp8-lavalse41.vercel.app/room/${id}`,
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -337,7 +337,7 @@ function RoomAndProperty({
       setLoading(true);
       try {
         const results = await axios.post(
-          `https://vercel.com/lavalse41/neatly-api/room/`,
+          `https://neatly-dj6ygctp8-lavalse41.vercel.app/room/`,
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -359,7 +359,7 @@ function RoomAndProperty({
   const deleteRoomHandler = async (e: ChangeEvent, id: number) => {
     e.preventDefault();
     try {
-      await axios.delete(`https://vercel.com/lavalse41/neatly-api/room/${id}`);
+      await axios.delete(`https://neatly-dj6ygctp8-lavalse41.vercel.app/room/${id}`);
       setShowPage(InitialData);
       // navigate("/admin/RoomAndProperty")
       location.reload();

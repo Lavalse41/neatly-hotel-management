@@ -22,7 +22,7 @@ function AuthProvider(props) {
       const userDataFromToken = jwtDecode(token);
       await axios
         .get(
-          `https://vercel.com/lavalse41/neatly-api/validUser/${userDataFromToken.user_id}`
+          `https://neatly-dj6ygctp8-lavalse41.vercel.app/validUser/${userDataFromToken.user_id}`
         )
         .then((result) => {
           setState({
@@ -66,7 +66,7 @@ function AuthProvider(props) {
   const login = async (data) => {
     try {
       const result = await axios.post(
-        `https://vercel.com/lavalse41/neatly-api/auth/login`,
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/auth/login`,
         data
       );
       const token = result.data.token;

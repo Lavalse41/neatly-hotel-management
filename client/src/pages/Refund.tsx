@@ -34,7 +34,7 @@ function Refund() {
   const getData = async () => {
     try {
       const response = await axios.get(
-        `https://vercel.com/lavalse41/neatly-api/booking/${bookId}`
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/booking/${bookId}`
       );
 
       const data = response.data.data;
@@ -47,7 +47,7 @@ function Refund() {
   const updateData = async () => {
     try {
       const response = await axios.put(
-        `https://vercel.com/lavalse41/neatly-api/booking/cancel/${bookId}`,
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/booking/cancel/${bookId}`,
         { ...cancelBooking, refund: true }
       );
       console.log(response.data);
@@ -71,7 +71,7 @@ function Refund() {
     if (token) {
       const userDataFromToken = jwtDecode(token);
       const result = await axios.get(
-        `https://vercel.com/lavalse41/neatly-api/validUser/${userDataFromToken.user_id}`
+        `https://neatly-dj6ygctp8-lavalse41.vercel.app/validUser/${userDataFromToken.user_id}`
       );
       setCheckUser(result.data.user_id);
     } else {
